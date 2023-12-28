@@ -1,13 +1,21 @@
-const deck = [];
+const deck = {
+    cards: []
+};
+
+const hand = {
+    cards: []
+}
 
 let addToDeckBottom = (obj) => {
-    deck.push(obj);
-    // console.log(deck);
+    deck.cards.push(obj);
+    // console.log('This is your deck: ' + deck.cards);
 }
 
 let drawFromDeckTop = () => {
-    deck.shift();
-    console.log(deck);
+    let card = deck.cards.shift();
+    // console.log('This is your deck: ' + deck.cards);
+    hand.cards.unshift(card);
+    console.log('This is your hand: ' + hand.cards);
 }
 
 // // add hearts suit (long method)
