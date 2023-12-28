@@ -17,56 +17,6 @@ let drawFromDeckTop = () => {
     hand.cards.unshift(card);
     console.log('This is your hand: ' + hand.cards);
 }
-
-// // add hearts suit (long method)
-// console.log('card added to bottom of deck');
-// addToDeckBottom('ace of hearts');
-// console.log('card added to bottom of deck');
-// addToDeckBottom('two of hearts');
-// console.log('card added to bottom of deck');
-// addToDeckBottom('three of hearts');
-// console.log('card added to bottom of deck');
-// addToDeckBottom('four of hearts');
-// console.log('card added to bottom of deck');
-// addToDeckBottom('five of hearts');
-// console.log('card added to bottom of deck');
-// addToDeckBottom('six of hearts');
-// console.log('card added to bottom of deck');
-// addToDeckBottom('seven of hearts');
-// console.log('card added to bottom of deck');
-// addToDeckBottom('eight of hearts');
-// console.log('card added to bottom of deck');
-// addToDeckBottom('nine of hearts');
-// console.log('card added to bottom of deck');
-// addToDeckBottom('ten of hearts');
-// console.log('card added to bottom of deck');
-// addToDeckBottom('jack of hearts');
-// console.log('card added to bottom of deck');
-// addToDeckBottom('queen of hearts');
-// console.log('card added to bottom of deck');
-// addToDeckBottom('king of hearts');
-// console.log('card added to bottom of deck');
-// addToDeckBottom('joker of hearts');
-// console.log(deck);
-
-// // add hearts suit (short method)
-// console.log('cards added to bottom of deck');
-// addToDeckBottom('ace of hearts');
-// addToDeckBottom('two of hearts');
-// addToDeckBottom('three of hearts');
-// addToDeckBottom('four of hearts');
-// addToDeckBottom('five of hearts');
-// addToDeckBottom('six of hearts');
-// addToDeckBottom('seven of hearts');
-// addToDeckBottom('eight of hearts');
-// addToDeckBottom('nine of hearts');
-// addToDeckBottom('ten of hearts');
-// addToDeckBottom('jack of hearts');
-// addToDeckBottom('queen of hearts');
-// addToDeckBottom('king of hearts');
-// addToDeckBottom('joker of hearts');
-// console.log(deck);
-
 // add all suits
 // diamonds
 addToDeckBottom('ace of diamonds');
