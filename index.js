@@ -1,10 +1,26 @@
+const diamonds = [
+    'ace of diamonds', 'two of diamonds', 'three of diamonds', 'four of diamonds', 'five of diamonds', 'six of diamonds', 'seven of diamonds', 'eight of diamonds', 'nine of diamonds', 'ten of diamonds', 'jack of diamonds', 'queen of diamonds', 'king of diamonds', 'joker of diamonds'
+]
+
+const hearts = [
+    'ace of hearts', 'two of hearts', 'three of hearts', 'four of hearts', 'five of hearts', 'six of hearts', 'seven of hearts', 'eight of hearts', 'nine of hearts', 'ten of hearts', 'jack of hearts', 'queen of hearts', 'king of hearts', 'joker of hearts'
+]
+
+const spades = [
+    'ace of spades', 'two of spades', 'three of spades', 'four of spades', 'five of spades', 'six of spades', 'seven of spades', 'eight of spades', 'nine of spades', 'ten of spades', 'jack of spades', 'queen of spades', 'king of spades', 'joker of spades'
+]
+
+const clubs = [
+    'ace of clubs', 'two of clubs', 'three of clubs', 'four of clubs', 'five of clubs', 'six of clubs', 'seven of clubs', 'eight of clubs', 'nine of clubs', 'ten of clubs', 'jack of clubs', 'queen of clubs', 'king of clubs', 'joker of clubs'
+]
+
 const deck = {
     cards: []
 };
 
 const hand = {
     cards: []
-}
+};
 
 let addToDeckBottom = (obj) => {
     deck.cards.push(obj);
@@ -17,67 +33,6 @@ let drawFromDeckTop = () => {
     hand.cards.unshift(card);
     console.log('This is your hand: ' + hand.cards);
 }
-// add all suits
-// diamonds
-addToDeckBottom('ace of diamonds');
-addToDeckBottom('two of diamonds');
-addToDeckBottom('three of diamonds');
-addToDeckBottom('four of diamonds');
-addToDeckBottom('five of diamonds');
-addToDeckBottom('six of diamonds');
-addToDeckBottom('seven of diamonds');
-addToDeckBottom('eight of diamonds');
-addToDeckBottom('nine of diamonds');
-addToDeckBottom('ten of diamonds');
-addToDeckBottom('jack of diamonds');
-addToDeckBottom('queen of diamonds');
-addToDeckBottom('king of diamonds');
-addToDeckBottom('joker of diamonds');
-// clubs
-addToDeckBottom('ace of clubs');
-addToDeckBottom('two of clubs');
-addToDeckBottom('three of clubs');
-addToDeckBottom('four of clubs');
-addToDeckBottom('five of clubs');
-addToDeckBottom('six of clubs');
-addToDeckBottom('seven of clubs');
-addToDeckBottom('eight of clubs');
-addToDeckBottom('nine of clubs');
-addToDeckBottom('ten of clubs');
-addToDeckBottom('jack of clubs');
-addToDeckBottom('queen of clubs');
-addToDeckBottom('king of clubs');
-addToDeckBottom('joker of clubs');
-// hearts
-addToDeckBottom('ace of hearts');
-addToDeckBottom('two of hearts');
-addToDeckBottom('three of hearts');
-addToDeckBottom('four of hearts');
-addToDeckBottom('five of hearts');
-addToDeckBottom('six of hearts');
-addToDeckBottom('seven of hearts');
-addToDeckBottom('eight of hearts');
-addToDeckBottom('nine of hearts');
-addToDeckBottom('ten of hearts');
-addToDeckBottom('jack of hearts');
-addToDeckBottom('queen of hearts');
-addToDeckBottom('king of hearts');
-addToDeckBottom('joker of hearts');
-// spades
-addToDeckBottom('ace of spades');
-addToDeckBottom('two of spades');
-addToDeckBottom('three of spades');
-addToDeckBottom('four of spades');
-addToDeckBottom('five of spades');
-addToDeckBottom('six of spades');
-addToDeckBottom('seven of spades');
-addToDeckBottom('eight of spades');
-addToDeckBottom('nine of spades');
-addToDeckBottom('ten of spades');
-addToDeckBottom('jack of spades');
-addToDeckBottom('queen of spades');
-addToDeckBottom('king of spades');
-addToDeckBottom('joker of spades');
 
 console.log(deck);
 
