@@ -26,6 +26,10 @@ const fullDeck = [
     fiftyTwoCardDeck + jokers
 ]
 
+const deck = {
+    cards: []
+};
+
 const hand = {
     cards: []
 };
@@ -40,6 +44,10 @@ let drawFromDeckTop = () => {
     // console.log('This is your deck: ' + deck.cards);
     hand.cards.unshift(card);
     console.log('This is your hand: ' + hand.cards);
+}
+
+for (card of fullDeck) {
+    deck.cards.push(fullDeck[card]);
 }
 
 console.log(deck);
