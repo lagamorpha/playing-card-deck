@@ -75,6 +75,7 @@ createDeck(jokers, fullDeck);
 
 // create playing deck
 let input = prompt("Between the fullDeck and fiftyTwoCardDeck which would you like to use");
+console.log(input);
 if (input === fullDeck / input === fiftyTwoCardDeck) {
     createDeck(input, playingDeck.cards);
     barker(`here is your deck: ${playingDeck.cards}`);
