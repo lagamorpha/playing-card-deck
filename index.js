@@ -30,6 +30,11 @@ const hand = {
     cards: []
 };
 
+let barker = (array) => {
+    console.log(array);
+    prompt(array);
+}
+
 let addToDeckBottom = (obj) => {
     deck.cards.push(obj);
     // console.log('This is your deck: ' + deck.cards);
@@ -59,16 +64,15 @@ createDeck(diamonds, fiftyTwoCardDeck);
 createDeck(hearts, fiftyTwoCardDeck);
 createDeck(spades, fiftyTwoCardDeck);
 createDeck(clubs, fiftyTwoCardDeck);
-console.log(fiftyTwoCardDeck);
+// barker(fiftyTwoCardDeck);
 
 createDeck(fiftyTwoCardDeck, fullDeck);
 createDeck(jokers, fullDeck);
-console.log(fullDeck);
+// barker(fullDeck);
 
-
-// createDeck(fullDeck, playingDeck.cards);
-
-// console.log(playingDeck.cards);
+prompt("Between the fullDeck and fiftyTwoCardDeck which would you like to use")
+createDeck(fullDeck, playingDeck.cards);
+barker(playingDeck.cards);
 
 // draw a card
 // console.log('you drew a card');
