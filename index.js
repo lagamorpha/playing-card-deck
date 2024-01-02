@@ -1,3 +1,4 @@
+// data entry for suites
 const diamonds = [
     'ace of diamonds', 'two of diamonds', 'three of diamonds', 'four of diamonds', 'five of diamonds', 'six of diamonds', 'seven of diamonds', 'eight of diamonds', 'nine of diamonds', 'ten of diamonds', 'jack of diamonds', 'queen of diamonds', 'king of diamonds'
 ];
@@ -18,10 +19,12 @@ const jokers = [
     'joker of clubs', 'joker of spades', 'joker of hearts', 'joker of diamonds'
 ];
 
+// create arrays for decks used behind the scenes
 const fiftyTwoCardDeck = [];
 
 const fullDeck = [];
 
+// create objects for decks used by user
 const playingDeck = {
     cards: []
 };
@@ -30,35 +33,34 @@ const hand = {
     cards: []
 };
 
-let barker = (array) => {
-    console.log(array);
-    prompt(array);
+// setup basic functions
+let barker = (input) => {
+    console.log(input);
+    alert(input);
 }
-
-let addToDeckBottom = (obj) => {
-    deck.cards.push(obj);
-    // console.log('This is your deck: ' + deck.cards);
-}
-
-let drawFromDeckTop = (num) => {
-    let card = deck.cards.shift();
-    // console.log('This is your deck: ' + deck.cards);
-    hand.cards.unshift(card);
-    console.log('This is your hand: ' + hand.cards);
-}
-
-// for (let cardID = 0; cardID < fullDeck.length; cardID += 1) {
-//     console.log(fullDeck[cardID])
-//     playingDeck.cards.push(fullDeck[cardID]);
-// }
 
 let createDeck = (donorDeck, recieveDeck) => {
-    for (let cardID = 0; cardID < donorDeck.length; cardID += 1) {
+    for (let cardID = 0; cardID < donorDeck.length; cardID++) {
         // console.log(donorDeck[cardID])
         recieveDeck.push(donorDeck[cardID]);
     }
     // console.log(recieveDeck);
 }
+
+let drawFromDeckTop = (num) => {
+    for (let repeat = 0; repeat <= parseInt(num); num++) {
+        let card = playingDeck.cards.shift();
+        // console.log('This is your deck: ' + deck.cards);
+        hand.cards.unshift(card);
+        // console.log('This is your hand: ' + hand.cards);
+    }
+    barker(hand.cards);
+}
+
+// let addToDeckBottom = (obj) => {
+//     deck.cards.push(obj);
+//     // console.log('This is your deck: ' + deck.cards);
+// }
 
 createDeck(diamonds, fiftyTwoCardDeck);
 createDeck(hearts, fiftyTwoCardDeck);
@@ -71,9 +73,9 @@ createDeck(jokers, fullDeck);
 // barker(fullDeck);
 
 prompt("Between the fullDeck and fiftyTwoCardDeck which would you like to use")
+// if ()
 createDeck(fullDeck, playingDeck.cards);
-barker(playingDeck.cards);
+// barker(playingDeck.cards);
 
 // draw a card
-// console.log('you drew a card');
-// drawFromDeckTop();
+// drawFromDeckTop(1);
