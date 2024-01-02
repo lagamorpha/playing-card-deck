@@ -18,9 +18,9 @@ const jokers = [
     'joker of clubs', 'joker of spades', 'joker of hearts', 'joker of diamonds'
 ];
 
-const fiftyTwoCardDeck = ['ace of diamonds', 'two of diamonds', 'three of diamonds', 'four of diamonds', 'five of diamonds', 'six of diamonds', 'seven of diamonds', 'eight of diamonds', 'nine of diamonds', 'ten of diamonds', 'jack of diamonds', 'queen of diamonds', 'king of diamonds', 'ace of hearts', 'two of hearts', 'three of hearts', 'four of hearts', 'five of hearts', 'six of hearts', 'seven of hearts', 'eight of hearts', 'nine of hearts', 'ten of hearts', 'jack of hearts', 'queen of hearts', 'king of hearts', 'ace of spades', 'two of spades', 'three of spades', 'four of spades', 'five of spades', 'six of spades', 'seven of spades', 'eight of spades', 'nine of spades', 'ten of spades', 'jack of spades', 'queen of spades', 'king of spades', 'ace of clubs', 'two of clubs', 'three of clubs', 'four of clubs', 'five of clubs', 'six of clubs', 'seven of clubs', 'eight of clubs', 'nine of clubs', 'ten of clubs', 'jack of clubs', 'queen of clubs', 'king of clubs'];
+const fiftyTwoCardDeck = [];
 
-const fullDeck = ['ace of diamonds', 'two of diamonds', 'three of diamonds', 'four of diamonds', 'five of diamonds', 'six of diamonds', 'seven of diamonds', 'eight of diamonds', 'nine of diamonds', 'ten of diamonds', 'jack of diamonds', 'queen of diamonds', 'king of diamonds', 'ace of hearts', 'two of hearts', 'three of hearts', 'four of hearts', 'five of hearts', 'six of hearts', 'seven of hearts', 'eight of hearts', 'nine of hearts', 'ten of hearts', 'jack of hearts', 'queen of hearts', 'king of hearts', 'ace of spades', 'two of spades', 'three of spades', 'four of spades', 'five of spades', 'six of spades', 'seven of spades', 'eight of spades', 'nine of spades', 'ten of spades', 'jack of spades', 'queen of spades', 'king of spades', 'ace of clubs', 'two of clubs', 'three of clubs', 'four of clubs', 'five of clubs', 'six of clubs', 'seven of clubs', 'eight of clubs', 'nine of clubs', 'ten of clubs', 'jack of clubs', 'queen of clubs', 'king of clubs', 'joker of clubs', 'joker of spades', 'joker of hearts', 'joker of diamonds'];
+const fullDeck = [];
 
 const playingDeck = {
     cards: []
@@ -29,14 +29,6 @@ const playingDeck = {
 const hand = {
     cards: []
 };
-
-// let createDeck = (donorDeck, recieveDeck) => {
-//     for (let cardID of donorDeck) {
-//         console.log(donorDeck[cardID])
-//         recieveDeck.push(donorDeck[cardID]);
-//     }
-//     console.log(recieveDeck);
-// }
 
 let addToDeckBottom = (obj) => {
     deck.cards.push(obj);
@@ -50,10 +42,29 @@ let drawFromDeckTop = (num) => {
     console.log('This is your hand: ' + hand.cards);
 }
 
-for (let cardID = 0; cardID < fullDeck.length; cardID += 1) {
-    console.log(fullDeck[cardID])
-    playingDeck.cards.push(fullDeck[cardID]);
+// for (let cardID = 0; cardID < fullDeck.length; cardID += 1) {
+//     console.log(fullDeck[cardID])
+//     playingDeck.cards.push(fullDeck[cardID]);
+// }
+
+let createDeck = (donorDeck, recieveDeck) => {
+    for (let cardID = 0; cardID < donorDeck.length; cardID += 1) {
+        // console.log(donorDeck[cardID])
+        recieveDeck.push(donorDeck[cardID]);
+    }
+    // console.log(recieveDeck);
 }
+
+createDeck(diamonds, fiftyTwoCardDeck);
+createDeck(hearts, fiftyTwoCardDeck);
+createDeck(spades, fiftyTwoCardDeck);
+createDeck(clubs, fiftyTwoCardDeck);
+console.log(fiftyTwoCardDeck);
+
+createDeck(fiftyTwoCardDeck, fullDeck);
+createDeck(jokers, fullDeck);
+console.log(fullDeck);
+
 
 // createDeck(fullDeck, playingDeck.cards);
 
