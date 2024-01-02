@@ -36,7 +36,7 @@ const hand = {
 // setup basic functions
 let barker = (input) => {
     console.log(input);
-    alert(input);
+    confirm(input);
 }
 
 let createDeck = (donorDeck, recieveDeck) => {
@@ -44,7 +44,7 @@ let createDeck = (donorDeck, recieveDeck) => {
         // console.log(donorDeck[cardID])
         recieveDeck.push(donorDeck[cardID]);
     }
-    // console.log(recieveDeck);
+    // barker(`here is your deck: ${recieveDeck}`);
 }
 
 let drawFromDeckTop = (num) => {
@@ -54,7 +54,7 @@ let drawFromDeckTop = (num) => {
         hand.cards.unshift(card);
         // console.log('This is your hand: ' + hand.cards);
     }
-    barker(hand.cards);
+    barker(`here is your hand: ${hand.cards}`);
 }
 
 // let addToDeckBottom = (obj) => {
@@ -62,20 +62,27 @@ let drawFromDeckTop = (num) => {
 //     // console.log('This is your deck: ' + deck.cards);
 // }
 
+// create background decks
 createDeck(diamonds, fiftyTwoCardDeck);
 createDeck(hearts, fiftyTwoCardDeck);
 createDeck(spades, fiftyTwoCardDeck);
 createDeck(clubs, fiftyTwoCardDeck);
-// barker(fiftyTwoCardDeck);
+// barker(`here is your deck: ${fiftyTwoCardDeck}`);
 
 createDeck(fiftyTwoCardDeck, fullDeck);
 createDeck(jokers, fullDeck);
-// barker(fullDeck);
+// barker(`here is your deck: ${fullDeck}`);
 
-prompt("Between the fullDeck and fiftyTwoCardDeck which would you like to use")
-// if ()
-createDeck(fullDeck, playingDeck.cards);
-// barker(playingDeck.cards);
-
+// create playing deck
+let input = prompt("Between the fullDeck and fiftyTwoCardDeck which would you like to use");
+if (input === fullDeck / input === fiftyTwoCardDeck) {
+    createDeck(input, playingDeck.cards);
+    barker(`here is your deck: ${playingDeck.cards}`);
+} else {
+    createDeck(fullDeck, playingDeck.cards);
+    barker(`here is your deck: ${playingDeck.cards}`);
+}
 // draw a card
 // drawFromDeckTop(1);
+
+
