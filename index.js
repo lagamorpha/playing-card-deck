@@ -55,7 +55,7 @@ for (let cardID = 0; cardID < fullDeck.length; cardID += 1) {
     playingDeck.cards.push(fullDeck[cardID]);
 }
 
-createDeck(fullDeck, playingDeck.cards);
+// createDeck(fullDeck, playingDeck.cards);
 
 // console.log(playingDeck.cards);
 
