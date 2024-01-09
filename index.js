@@ -341,9 +341,9 @@ const fullDeck = [
 const fiftyTwo = fullDeck.filter(card => card.face !== 'joker')
 
 // setup basic functions
-const barker = (deck) => {
-    console.log(deck.name);
-    confirm(deck.name);
+const barker = (...deck) => {
+    console.log(...deck.name);
+    confirm(...deck.name);
 }
 
 barker(fiftyTwo);
