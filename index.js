@@ -346,7 +346,6 @@ const barker = (deck) => {
     confirm(deck.name);
 }
 
-
 barker(fiftyTwo);
 barker(fullDeck);
 
